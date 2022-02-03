@@ -189,9 +189,7 @@ section > p {
     padding-bottom: 2em;
 }
 
-section > ul {
-    padding-bottom: ;
-}
+
 article {
     display: flex;
     flex-direction: column;
