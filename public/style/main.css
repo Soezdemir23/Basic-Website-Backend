@@ -1,5 +1,223 @@
+/*Let's start with a reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    background-color: aquamarine;
-    font-family: 'Courier New', Courier, monospace;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+
+/*Let's start with how to manage the website:
+    I really do not care about where it stops.
+    BUUUT the footer should stick to the ground
+    Then, I want to make the website viewable by the mobile phone
+
+    */
+
+/*Added the change to the a I can change*/
+html,body {
+    height: 100%;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aqua;
+}
+
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+a:active {
+    color: turquoise
+}
+
+/*overwritten if width is less than 480px*/
+@media screen and (max-width: 480px) {
+    
+    /*I REALLY like how you can stick the footer to the ground like this*/
+    header {
+        display: flex;       
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        gap: 1.5em;
+    }
+
+    header > h1 {
+        font-size: xx-large;
+    }
+    header > nav > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    header > nav > ul > li {
+        padding: 0.5em;        
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2em;
+        padding-top: 4em;
+    }
+
+    section>h2 {
+        text-align: center;
+        font-size: xx-large;
+    }
+    section>p {
+        text-align: center;
+        font-size: larger;
+    }
+    
+
+    /*avg looks for the header??*/
+header > nav > ul>li:first-child {
+    padding-left: 1.45em;
+    padding-right: 1.45em;   
+}
+header > nav > ul>li:nth-child(2){
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+}
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5em 1em 4em 1em;
+}
+
+header > h1 {
+    font-size: xx-large;
+}
+
+header > nav > ul {
+    display: flex;
+    gap: 3em;
+}
+
+
+header > nav > ul > li {
+    background-color: cadetblue;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+header > nav > ul > li {
+    padding: 0.5em;
+}
+
+header > nav > ul > li:active {
+    background-color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+section > h2 {
+    font-size: x-large;
+    padding-bottom: 2em;
+}
+section > p {
+    padding-bottom: 2em;
+}
+
+section > ul {
+    padding-bottom: ;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+/*Article in "about"*/
+article > section > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+article > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article > section  > h2 {
+    text-align: center;    
+}
+
+article > section > p {
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
