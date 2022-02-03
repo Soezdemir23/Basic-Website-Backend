@@ -44,6 +44,7 @@ const server = http.createServer((req, res) => {
             console.log("This filename needs to be added: " + extname);
             break;
     }
+    console.log(filePath)
 
     //print the filePath given for debugging reasons:
     // read the given files for display, then call a function.
