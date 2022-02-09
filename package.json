@@ -4,7 +4,9 @@
   "description": "A basic informational site to show I can work with NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "keywords": [
     "nodejs",
@@ -12,5 +14,9 @@
     "css"
   ],
   "author": "Soezdemir23",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
 }
